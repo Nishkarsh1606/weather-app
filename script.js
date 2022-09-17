@@ -8,11 +8,16 @@ const minTemp=document.querySelector("#minTemp")
 
 
 const getWeatherData=async()=>{
-    const searchCityName=searchBarInput.value
-    const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchCityName}&appid=a6d8d3e278a1745de95c8de12eb58ce2`)
-    const data=await response.json()
-    setWeatherData(data)
-    console.log(data);
+    try {
+        const searchCityName=searchBarInput.value
+        const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchCityName}&appid=a6d8d3e278a1745de95c8de12eb58ce2`)
+        const data=await response.json()
+        setWeatherData(data)
+        console.log(data);
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
 
 const setWeatherData=(data)=>{
