@@ -29,5 +29,3 @@ if(e.key==='Enter'){
     getWeather()
     }
 })
-
-//Now divide the code into fetch-->get-->display modules
