@@ -16,7 +16,7 @@ const getWeatherData=async()=>{
         console.log(data);
     }
     catch (error) {
-        console.log(error);
+        alert('Please enter correct city name')
     }
 }
 
